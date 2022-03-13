@@ -12,7 +12,7 @@ from telethon.tl import types
 from telethon.utils import get_display_name
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import edit_delete, edit_or_reply, kyy_cmd
+from userbot.utils import edit_delete, edit_or_reply, av_cmd
 from userbot.events import register
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"
@@ -36,7 +36,7 @@ def user_list(l, n):
         yield l[i: i + n]
 
 
-@kyy_cmd(pattern="startvc$")
+@av_cmd(pattern="startvc$")
 @register(pattern=r"^\.startvcs$", sudo=True)
 async def start_voice(c):
     chat = await c.get_chat()
@@ -53,7 +53,7 @@ async def start_voice(c):
         await edit_or_reply(c, f"**ERROR:** `{ex}`")
 
 
-@kyy_cmd(pattern="stopvc$")
+@av_cmd(pattern="stopvc$")
 @register(pattern=r"^\.stopvcs$", sudo=True)
 async def stop_voice(c):
     chat = await c.get_chat()
@@ -70,7 +70,7 @@ async def stop_voice(c):
         await edit_delete(c, f"**ERROR:** `{ex}`")
 
 
-@kyy_cmd(pattern="vcinvite")
+@av_cmd(pattern="vcinvite")
 async def _(kyy):
     await edit_or_reply(kyy, "`Sedang Menginvite Member...`")
     users = []
@@ -88,7 +88,7 @@ async def _(kyy):
     await edit_or_reply(kyy, f"`Menginvite {z} Member`")
 
 
-@kyy_cmd(pattern="vctitle(?: |$)(.*)")
+@av_cmd(pattern="vctitle(?: |$)(.*)")
 @register(pattern=r"^\.cvctitle$", sudo=True)
 async def change_title(e):
     title = e.pattern_match.group(1)
