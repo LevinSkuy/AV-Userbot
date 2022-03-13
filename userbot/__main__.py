@@ -18,7 +18,7 @@ from userbot import (
     BOT_VER,
     LOGS,
     ALIVE_NAME,
-    kyyblacklist,
+    AVblacklist,
     bot,
     call_py,
 )
@@ -29,10 +29,10 @@ try:
     bot.start()
     call_py.start()
     user = bot.get_me()
-    kyyblacklist = requests.get(
-        "https://raw.githubusercontent.com/muhammadrizky16/Kyyblack/master/kyyblacklist.json"
+    AVblacklist = requests.get(
+        "https://raw.githubusercontent.com/LevinSkuy/AVblack/master/AVblacklist.json"
     ).json()
-    if user.id in kyyblacklist:
+    if user.id in AVblacklist:
         LOGS.warning(
             "MAKANYA GA USAH BERTINGKAH GOBLOK, USERBOTnya GUA MATIIN NAJIS BANGET DIPAKE ORANG KEK LU.\nCredits: @IDnyaKosong"
         )
@@ -45,15 +45,15 @@ for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
 LOGS.info(
-    f"Jika {ALIVE_NAME} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/NastySupportt")
+    f"Jika {ALIVE_NAME} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/pantekyks")
 LOGS.info(
-    f"✨Kyy-Userbot✨ ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
+    f"🔥Av-Userbot🔥 ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
 
 
 async def check_alive():
     try:
         if BOTLOG_CHATID != 0:
-            await bot.send_message(BOTLOG_CHATID, "✨ **Kyy Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 3.1.0@Kyy-Userbot\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @NastyProject ")
+            await bot.send_message(BOTLOG_CHATID, "✨ **AV Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 8.1.0@AV-Userbot\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @trashme2 ")
     except Exception as e:
         LOGS.info(str(e))
     try:
