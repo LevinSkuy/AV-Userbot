@@ -1,7 +1,7 @@
 import asyncio
 
 from userbot import ALIVE_NAME, CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import av_cmd
 from platform import uname
 
 # ================= CONSTANT =================
@@ -9,7 +9,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@kyy_cmd(pattern="deploy ?(.*)")
+@av_cmd(pattern="deploy ?(.*)")
 async def _(event):
 
     if event.fwd_from:
@@ -45,8 +45,8 @@ async def _(event):
         "telethon.network.mtprotosender -\nINFO - Received response without parent request",
         "INFO - Kyy-Userbot: Logged in as 557667062",
         "INFO - Kyy-Userbot: Successfully...",
-        "919852+00:00 app[worker.1]: 919 - Kyy-Userbot -",
-        "INFO -  ✨Kyy-Userbot✨  ⚙️ V5.0 [TELAH DIAKTIFKAN!]",
+        "919852+00:00 app[worker.1]: 919 - Av-Userbot -",
+        "INFO -  ✨AV-Userbot✨  ⚙️ 8.1.0 [TELAH DIAKTIFKAN!]",
         "**Build Succeeded**"
 
     ]
