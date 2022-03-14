@@ -6,6 +6,7 @@
 
 import random
 from userbot.events import register
+from userbot import DEVS
 
 # OWN BY RENDY CODE
 # CPING
